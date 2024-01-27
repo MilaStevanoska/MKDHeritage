@@ -32,6 +32,12 @@ public class CulturalPlaceController {
         this.userService = userService;
     }
 
+    @PostMapping("/places/{id}/delete")
+    public String delete(@PathVariable Long id) {
+      //  this.culturalPlaceService.delete(id);  TO DO
+        return "redirect:/places";
+    }
+
     @GetMapping("/places")
     public String getMainPage(Model model) throws IOException, CsvException {
 
